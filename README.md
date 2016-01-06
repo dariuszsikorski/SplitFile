@@ -5,9 +5,9 @@ Split files can split sections from input file to separate files and folders. Th
 
 Example usage: writing component which combine html, javaScript, css and documentation in one file and split each section into file with proper extension (like component.html, component.js, .component.css, ./doc/component_readme.md).
 
-##Installation##
+## Installation
 `
-npm install splitfiles
+npm install splitfile
 `
 
 and then
@@ -18,7 +18,7 @@ var splitfile = require('splitfile');
 splitfile('/path/to/source/file/some.source');
 ```
 
-##Example file##
+## Example file
 ```
 <splitSection output="style/style.css">
   /* code for style.css file goes here... */
@@ -33,7 +33,7 @@ splitfile('/path/to/source/file/some.source');
 </splitSection>
 ```
 
-##Additional notes##
+## Additional notes
 - Output attribute is relative to the path of source file.
 - Output code is automatically trimmed from new lines at begin and end of code.
 
