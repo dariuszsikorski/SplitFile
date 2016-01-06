@@ -1,41 +1,33 @@
-#Split file
-===========
-**Split sections of code into separate files and folders.**
+Scapegoat
+=========
 
-Just define input file to separate files and folders. This feature is useful if you want to store multiple parts of code in one file and export them to separated files.
-
-Example usage: writing component which combine html, javaScript, css and documentation in one file and split each section into file with proper extension (like component.html, component.js, .component.css, ./doc/component_readme.md).
+A small library providing utility methods to `escape` and `unescape` HTML entities
 
 ## Installation
-```
-npm install splitfile
-```
 
-and then
+  npm install scapegoat --save
 
-```
-var splitfile = require('splitfile');
+## Usage
 
-splitfile('/path/to/source/file/some.source');
-```
+  var scapegoat = require('scapegoat')
+      escape = scapegoat.escape,
+      unescape = scapegoat.unescape;
 
-## Example file
-```
-<splitSection output="style/style.css">
-  /* code for style.css file goes here... */
-</splitSection>
+  var html = '<h1>Hello World</h1>',
+      escaped = escape(html),
+      unescaped = unescape(escaped);
 
-<splitSection output="pages/main.html">
-  <!-- code for main.html goes here... -->
-</splitSection>
+  console.log('html', html, 'escaped', escaped, 'unescaped', unescaped);
 
-<splitSection output="scripts/script.js">
-  // code for script.js goes here...
-</splitSection>
-```
+## Tests
 
-## Additional notes
-- Output attribute is relative to the path of source file.
-- Output code is automatically trimmed from new lines at begin and end.
+  npm test
 
-If you find this project useful, you can always drop me a line at http://prettyminimal.com or http://dariuszsikorski.pl
+## Contributing
+
+In lieu of a formal styleguide, take care to maintain the existing coding style.
+Add unit tests for any new or changed functionality. Lint and test your code.
+
+## Release History
+
+* 0.1.0 Initial release
