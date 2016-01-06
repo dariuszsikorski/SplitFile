@@ -1,4 +1,5 @@
-#Split file#
+#Split file
+===========
 **Split sections of code into separate files and folders.**
 
 Just define input file to separate files and folders. This feature is useful if you want to store multiple parts of code in one file and export them to separated files.
