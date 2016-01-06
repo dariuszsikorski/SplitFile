@@ -1,5 +1,5 @@
 #Split files#
-##split sections of code into separate files##
+###split sections of code into separate files###
 
 Split files can split sections from input file to separate files and folders. This feature is useful if you want to store multiple parts of code in one file and export them into separate files.
 
@@ -18,8 +18,8 @@ var splitfile = require('splitfile');
 splitfile('/path/to/source/file/some.source');
 `
 
-##example source file:##
-`
+##example file:##
+```
 <splitSection output="style/style.css">
   /* code for style.css file goes here... */
 </splitSection>
@@ -31,4 +31,4 @@ splitfile('/path/to/source/file/some.source');
 <splitSection output="scripts/script.js">
   // code for script.js goes here...
 </splitSection>
-`
+```
