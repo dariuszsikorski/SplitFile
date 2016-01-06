@@ -9,3 +9,26 @@ Example usage: writing component which combine html, javaScript, css and documen
 `
 npm install splitfiles
 `
+
+and then
+
+`
+var splitfile = require('splitfile');
+
+splitfile('/path/to/source/file/some.source');
+`
+
+##example source file:##
+`
+<splitSection output="style/style.css">
+  /* code for style.css file goes here... */
+</splitSection>
+
+<splitSection output="pages/main.html">
+  <!-- code for main.html goes here... -->
+</splitSection>
+
+<splitSection output="scripts/script.js">
+  // code for script.js goes here...
+</splitSection>
+`
