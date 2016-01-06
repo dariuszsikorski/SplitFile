@@ -1,0 +1,11 @@
+<splitSection output="style/style.css">
+  /* code for style.css file goes here... */
+</splitSection>
+
+<splitSection output="pages/main.html">
+  <!-- code for main.html goes here... -->
+</splitSection>
+
+<splitSection output="scripts/script.js">
+  // code for script.js goes here...
+</splitSection>
