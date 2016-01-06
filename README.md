@@ -6,9 +6,9 @@ Split files can split sections from input file to separate files and folders. Th
 Example usage: writing component which combine html, javaScript, css and documentation in one file and split each section into file with proper extension (like component.html, component.js, .component.css, ./doc/component_readme.md).
 
 ## Installation
-`
+```
 npm install splitfile
-`
+```
 
 and then
 
@@ -35,6 +35,6 @@ splitfile('/path/to/source/file/some.source');
 
 ## Additional notes
 - Output attribute is relative to the path of source file.
-- Output code is automatically trimmed from new lines at begin and end of code.
+- Output code is automatically trimmed from new lines at begin and end.
 
 If you find this project useful, you can always drop me a line at http://prettyminimal.com or http://dariuszsikorski.pl
