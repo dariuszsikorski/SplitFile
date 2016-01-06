@@ -5,7 +5,7 @@ module.exports = splitFile;
 
 function splitFile(filepath){
 
-  var sourcePath = process.cwd() + "\\" + filepath.replace("/", "\\");
+  var sourcePath = filepath.replace("/", "\\");
   var sourceFolder = sourcePath.substr(0, sourcePath.lastIndexOf("\\")+1);
 
   // load source file
@@ -13,11 +13,11 @@ function splitFile(filepath){
     if (err) {
       throw err;
     }
-    parseSource(data.toString());
+    parseXML(data.toString());
   });
 
   // parse source as xml
-  function parseSource(source){
+  function parseXML(source){
 
     $ = cheerio.load(source);
 
@@ -51,4 +51,6 @@ function splitFile(filepath){
       }
     });
   }
+
+
 }
