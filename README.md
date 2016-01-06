@@ -12,11 +12,11 @@ npm install splitfiles
 
 and then
 
-`
+```
 var splitfile = require('splitfile');
 
 splitfile('/path/to/source/file/some.source');
-`
+```
 
 ##Example file##
 ```
