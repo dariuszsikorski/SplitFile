@@ -1,0 +1,39 @@
+{
+  "name": "splitfile",
+  "version": "1.0.1",
+  "description": "split sections of code into separate files and folders.",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cheerio": "^0.19.0",
+    "fs-extra": "^0.26.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dariuszsikorski/SplitFile.git"
+  },
+  "keywords": [
+    "split",
+    "component",
+    "file",
+    "separate",
+    "folders",
+    "files",
+    "sections",
+    "react",
+    "angular",
+    "export",
+    "tool"
+  ],
+  "author": "Dariusz Sikorski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dariuszsikorski/SplitFile/issues"
+  },
+  "homepage": "https://github.com/dariuszsikorski/SplitFile#readme"
+}

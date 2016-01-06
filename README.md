@@ -1,5 +1,5 @@
 #Split files#
-**split sections of code into separate files**
+**split sections of code into separate files and folders.**
 
 Split files can split sections from input file to separate files and folders. This feature is useful if you want to store multiple parts of code in one file and export them into separate files.
 
@@ -37,4 +37,4 @@ splitfile('/path/to/source/file/some.source');
 - Output attribute is relative to the path of source file.
 - Output code is automatically trimmed from new lines at begin and end of code.
 
-If you used splitfile in your project, you can always drop me a line at http://prettyminimal.com or http://dariuszsikorski.pl :)
+If you find this project useful, you can always drop me a line at http://prettyminimal.com or http://dariuszsikorski.pl
