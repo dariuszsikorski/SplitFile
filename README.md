@@ -16,7 +16,7 @@ and then
 ```
 var splitfile = require('splitfile');
 
-splitfile('/path/to/source/file/some.source');
+splitfile('/path/to/source/file/example.file');
 ```
 
 ## Example file
