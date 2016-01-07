@@ -25,7 +25,7 @@ function splitFile(filepath){
     var result;
     while((result = regex.exec(source)) !== null) {
 
-      var sectionCode = result[0];
+      var sectionCode = result[2];
       var outputAttr = result[1];
 
       // ensure output attribute is defined
