@@ -19,7 +19,7 @@ function splitFile(filepath){
   // parse source as xml
   function parseXML(source){
 
-    $ = cheerio.load(source);
+    $ = cheerio.load(source, {decodeEntities: false});
 
     // split source code to sections
     var sections = $('splitSection');
