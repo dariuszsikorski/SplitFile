@@ -1,6 +1,6 @@
 {
   "name": "splitfile",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "split sections of code into separate files and folders.",
   "main": "index.js",
   "directories": {
