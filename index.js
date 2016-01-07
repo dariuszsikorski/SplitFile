@@ -1,5 +1,4 @@
 var fs = require('fs-extra');
-var cheerio = require('cheerio');
 
 module.exports = splitFile;
 
@@ -19,16 +18,15 @@ function splitFile(filepath){
   // parse source as xml
   function parseXML(source){
 
-    $ = cheerio.load(source, {decodeEntities: false});
-
-    // split source code to sections
-    var sections = $('splitSection');
+    // define regex of sections
+    var regex = new RegExp(/<splitSection output=\"(.*)\">([\s\S]*?)<\/splitSection>/gmi);
 
     // loop through each section
-    $(sections).each(function(index, element){
+    var result;
+    while((result = regex.exec(source)) !== null) {
 
-      var sectionCode = $(element).html();
-      var outputAttr = $(element).attr("output");
+      var sectionCode = result[0];
+      var outputAttr = result[1];
 
       // ensure output attribute is defined
       if(outputAttr == "" || outputAttr == null || outputAttr == "undefined"){
@@ -41,16 +39,13 @@ function splitFile(filepath){
 
         // remove first and last newline characters
         sectionCode = sectionCode.replace(/^\s+|\s+$/g, '');
-
         // save file
         fs.outputFile(outputPath, sectionCode, function (err) {
           if(err){
             console.log("error: " + err);
           }
-        })
+        });
       }
-    });
+    }
   }
-
-
 }
